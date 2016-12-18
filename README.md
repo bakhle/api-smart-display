@@ -1,2 +1,2 @@
 # api-smart-display
-API layer for smart-display 
+API layer for smart-display
