@@ -1,9 +1,17 @@
-var express = require('express');
-var router = express.Router();
+'use strict'
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+const express = require('express');
+const router = express.Router();
+
+const userController = require('../controllers/users');
+
+router.get('/', userController.returnUserProfile);
+
+router.get('/greetings', userController.returnPersonalGreetings);
+
+router.get('/stocks', userController.returnStocks);
+
+router.get('/news', userController.returnNews);
+
 
 module.exports = router;
