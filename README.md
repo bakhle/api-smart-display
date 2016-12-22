@@ -21,7 +21,7 @@ cat profile.json.sample > profile.json
 npm start
 ```
 
-It will run on port 8000 by default
+It will run on port 3000 by default
 
 
 ## Authors
