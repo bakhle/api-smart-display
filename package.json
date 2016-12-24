@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "test": "mocha --timeout 10000"
   },
   "dependencies": {
     "body-parser": "~1.15.2",
@@ -34,5 +35,10 @@
   "bugs": {
     "url": "https://github.com/bakhle/api-smart-display/issues"
   },
-  "homepage": "https://github.com/bakhle/api-smart-display#readme"
+  "homepage": "https://github.com/bakhle/api-smart-display#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "mocha": "^3.2.0"
+  }
 }
