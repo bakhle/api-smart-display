@@ -13,11 +13,13 @@ npm install
 
 ## Usage
 
-Create file `profile.json` in `config` directory using `profile.json.sample` file as a template and edit values
+Create file `profile.json` in `config` directory using `profile.json.sample` file as a template and edit values.
+Create `config.json` using `config.json.sample` as a template and add your own API keys and configuration data.
 
 ```console
 cd config
 cat profile.json.sample > profile.json
+cat config.json.sample > config.json
 npm start
 ```
 

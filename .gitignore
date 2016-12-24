@@ -39,5 +39,6 @@ jspm_packages
 # Mac "Desktop Services Store"
 .DS_Store
 
-# user profile
+# private data
 profile.json
+config.json
