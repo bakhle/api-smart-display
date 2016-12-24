@@ -18,5 +18,8 @@ module.exports = {
   },
   getUserProfile : function () {
     return userProfile;
+  },
+  getWeatherApiKey : function () {
+    return config.apiKeys.openWeatherMap;
   }
 }

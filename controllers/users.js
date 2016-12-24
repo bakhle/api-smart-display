@@ -8,10 +8,12 @@ const newsApiKey = config.getNewsApiKey();
 const personalGreetings = config.getPersonalGreetings();
 const stocks = config.getStocks();
 const userProfile = config.getUserProfile();
+const weatherApiKey = config.getWeatherApiKey();
 
 // change news source as needed
 const newsApiBaseUrl = 'https://newsapi.org/v1/articles?source=google-news&sortBy=top&apiKey=' + newsApiKey;
 const stocksApiBaseUrl = 'http://www.google.com/finance/info?q=';
+const weatherByCityBaseUrl = 'http://api.openweathermap.org/data/2.5/weather?appid=' + weatherApiKey + '&q=';
 
 
 module.exports.returnNews = (req, res) => {
@@ -54,10 +56,28 @@ module.exports.returnStocks = (req, res) => {
     body = JSON.parse(body);
 
     res.contentType("JSON").json(body);
-  })
+  });
 };
 
 
 module.exports.returnUserProfile = (req, res) => {
   res.json(userProfile);
+};
+
+
+module.exports.returnWeatherData = (req, res) => {
+
+  let requestUrl = weatherByCityBaseUrl;
+
+  requestUrl += userProfile.city + ',' + userProfile.country;
+
+  request(requestUrl, function (error, response, body) {
+    if (error) {
+      console.log(error);
+      return res.status(500).end();
+    };
+
+    console.log(requestUrl);
+    res.status(JSON.parse(body).cod).contentType("JSON").send(body);
+  });
 };
