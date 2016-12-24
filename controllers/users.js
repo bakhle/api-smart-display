@@ -13,7 +13,7 @@ const weatherApiKey = config.getWeatherApiKey();
 // change news source as needed
 const newsApiBaseUrl = 'https://newsapi.org/v1/articles?source=google-news&sortBy=top&apiKey=' + newsApiKey;
 const stocksApiBaseUrl = 'http://www.google.com/finance/info?q=';
-const weatherByCityBaseUrl = 'http://api.openweathermap.org/data/2.5/weather?appid=' + weatherApiKey + '&q=';
+const weatherByCityBaseUrl = 'http://api.openweathermap.org/data/2.5/weather?units=metric' + '&appid=' + weatherApiKey + '&q=';
 
 
 module.exports.returnNews = (req, res) => {
