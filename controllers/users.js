@@ -77,7 +77,6 @@ module.exports.returnWeatherData = (req, res) => {
       return res.status(500).end();
     };
 
-    console.log(requestUrl);
     res.status(JSON.parse(body).cod).contentType("JSON").send(body);
   });
 };
