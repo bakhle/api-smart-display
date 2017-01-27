@@ -23,7 +23,7 @@ cat config.json.sample > config.json
 npm start
 ```
 
-It will run on port 3000 by default
+It will run on port 5000 by default
 
 
 ## Authors
