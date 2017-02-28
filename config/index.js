@@ -7,19 +7,25 @@ const userProfile = require('./profile');
 
 
 module.exports = {
-  getNewsApiKey : function () {
+  getEvernoteConsumerKey : () => {
+    return config.apiKeys.evernoteConsumerKey;
+  },
+  getEvernoteConsumerSecret : () => {
+    return config.apiKeys.evernoteConsumerSecret;
+  },
+  getNewsApiKey : () => {
     return config.apiKeys.newsApiOrg;
   },
-  getPersonalGreetings : function () {
+  getPersonalGreetings : () => {
     return personalGreetings;
   },
-  getStocks : function () {
+  getStocks : () => {
     return stocks;
   },
-  getUserProfile : function () {
+  getUserProfile : () => {
     return userProfile;
   },
-  getWeatherApiKey : function () {
+  getWeatherApiKey : () => {
     return config.apiKeys.openWeatherMap;
   }
 }

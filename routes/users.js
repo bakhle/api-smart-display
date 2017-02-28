@@ -19,7 +19,13 @@ router.use(function(req, res, next) {
   next();
 });
 
+//  all routes begin with `/users`
+
 router.get('/', userController.returnUserProfile);
+
+router.get('/evernote', userController.returnEvernoteData);
+router.get('/evernote-oauth', userController.evernoteOAuth);
+router.get('/evernote-oauth-callback', userController.evernoteOAuthCallback);
 
 router.get('/greetings', userController.returnPersonalGreetings);
 
@@ -28,6 +34,7 @@ router.get('/news', userController.returnNews);
 router.get('/stocks', userController.returnStocks);
 
 router.get('/weather', userController.returnWeatherData);
+
 
 
 module.exports = router;
