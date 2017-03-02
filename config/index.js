@@ -3,6 +3,7 @@
 const config = require('./config')
 const personalGreetings = require('./greetings');
 const stocks = require('./stocks');
+const todos = require('./todos');
 const userProfile = require('./profile');
 
 
@@ -15,6 +16,9 @@ module.exports = {
   },
   getStocks : function () {
     return stocks;
+  },
+  getTodos : function () {
+    return todos;
   },
   getUserProfile : function () {
     return userProfile;

@@ -3,6 +3,7 @@
 const express = require('express');
 const router = express.Router();
 
+const todoController = require('../controllers/todos');
 const userController = require('../controllers/users');
 
 // middleware to allow CORS
@@ -26,6 +27,12 @@ router.get('/greetings', userController.returnPersonalGreetings);
 router.get('/news', userController.returnNews);
 
 router.get('/stocks', userController.returnStocks);
+
+router.get('/todos', todoController.getTodos);
+router.post('/todos', todoController.createTodo);
+router.post('/todos/:id', todoController.updateTodo);
+router.delete('/todos/:id', todoController.deleteTodo);
+
 
 router.get('/weather', userController.returnWeatherData);
 

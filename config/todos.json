@@ -1,0 +1,26 @@
+[
+  {
+    "text": "Walk the dog",
+    "status": "false"
+  },
+  {
+    "text": "Feed the dog",
+    "status": "true"
+  },
+  {
+    "text": "Wash car",
+    "status": "true"
+  },
+  {
+    "text": "Buy groceries",
+    "status": "true"
+  },
+  {
+    "text": "Pay bills",
+    "status": "false"
+  },
+  {
+    "text": "Call Manager",
+    "status": "false"
+  }
+]
