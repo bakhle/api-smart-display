@@ -1,7 +1,7 @@
 'use strict'
 
-const baseURL = 'http://localhost:3000';
-const weatherURL = '/users/weather'
+const baseURL = 'http://localhost:5000';
+const weatherURL = '/users/weather';
 
 const config = require('../config');
 

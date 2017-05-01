@@ -1,7 +1,7 @@
 'use strict'
 
-const baseURL = 'http://localhost:3000';
-const stocksURL = '/users/stocks'
+const baseURL = 'http://localhost:5000';
+const stocksURL = '/users/stocks';
 
 const config = require('../config');
 
